@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .main_div {
+            width: 100%;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(107, 201, 201);
+            font-size: 25px;
+
+        }
+
+        .inp_div {
+            padding: 10px;
+        }
+
+        button {
+            padding: 10px;
+            border-radius: 10px;
+            width: 10rem;
+        }
+
+        textarea {
+            width: 100%;
+            height: 100px;
+            padding: 12px 20px;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            background-color: #f8f8f8;
+            font-size: 16px;
+            resize: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main_div">
+        <form action="/server">
+            <div class="inp_div">
+                <label for="name">Name: </label>
+                <input type="text" id="name" name="username">
+            </div>
+            <div class="inp_div">
+                Sex:
+                <input type="radio" id="male" name="sex" value="male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="sex" value="female">
+                <label for="female">Female</label>
+                <input type="radio" id="other" name="sex" value="othe">
+                <label for="other">Male</label>
+            </div>
+            <div class="inp_div">
+                countery:
+                <select name="countery" id="countery">
+                    <option>Select</option>
+                    <option value="ind">India</option>
+                    <option value="usa">Usa</option>
+                    <option value="japan">Japan</option>
+                </select>
+            </div>
+            <div class="inp_div">
+                <label for="text_area">Message: </label>
+                <textarea name="msg" id="text_area" cols="30" rows="4"></textarea>
+            </div>
+            <div class="inp_div">
+                <input type="checkbox" name="Subscribe" value="yes" id="sub">
+                <label for="sub">Subscribe ?</label>
+            </div>
+            <button>Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>
